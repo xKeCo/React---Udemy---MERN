@@ -17,7 +17,7 @@ const CounterApp = ({ value }) => {
   return (
     <>
       <h1>CounterApp</h1>
-      <h2> {counter} </h2>
+      <h2 id="counter"> {counter} </h2>
 
       <button onClick={handleAdd}>+1</button>
       <button onClick={handleSubtract}>-1</button>
@@ -28,6 +28,10 @@ const CounterApp = ({ value }) => {
 
 CounterApp.propTypes = {
   value: PropTypes.number.isRequired,
+};
+
+CounterApp.defaultProps = {
+  value: 100,
 };
 
 export default CounterApp;
